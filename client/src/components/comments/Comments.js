@@ -4,7 +4,6 @@ import { useContext, useEffect, useState } from "react";
 import ShowMoreText from "react-show-more-text";
 import Login from "../login/Login";
 import Register from "../register/Register";
-import parse from "html-react-parser";
 import "./comments.scss";
 import { Context } from "../../context/Context";
 import { useLocation } from "react-router";
@@ -236,7 +235,7 @@ const Comments = ({ movieDetails, path }) => {
                           width={380}
                           truncatedEndingComponent={"... "}
                         >
-                          {parse(r.content)}
+                          {r.content}
                         </ShowMoreText>
                       </div>
                     </div>
