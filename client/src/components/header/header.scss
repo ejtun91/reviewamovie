@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .headerWrapper {
+    margin-top: 6em;
+    width: 40%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .headerTitle {
+      font-size: 2.5em;
+      text-align: center;
+      font-weight: 700;
+      color: white;
+    }
+    .headerSub {
+      text-align: center;
+      width: 80%;
+      color: white;
+    }
+    .anotherSub {
+      color: #428bca;
+      font-weight: 600;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}

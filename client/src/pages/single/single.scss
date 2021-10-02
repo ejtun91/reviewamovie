@@ -1,0 +1,29 @@
+.single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(14, 14, 14, 1) 42%),
+    url("https://img.yts.mx/assets/images/movies/Edge_of_Darkness_2010/background.jpg")
+      no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+
+  .singleWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .single {
+    overflow-x: hidden;
+    .singleWrapper {
+      margin-top: 1em;
+      width: 100%;
+    }
+  }
+}

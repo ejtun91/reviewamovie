@@ -1,0 +1,19 @@
+.home {
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://img.yts.mx/assets/images/movies/respect_2021/background.jpg")
+      no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

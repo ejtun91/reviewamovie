@@ -1,0 +1,75 @@
+.popDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  .popdownWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .popTitle {
+      padding: 25px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgb(128, 128, 128);
+      width: 55%;
+
+      .iconStar {
+        color: #6ac045;
+        position: relative;
+        bottom: 3px;
+        margin-right: 5px;
+      }
+
+      .popTitleSub {
+        font-size: 20px;
+        color: white;
+      }
+    }
+    .cardWrapper {
+      margin-top: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: 3em;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .popDown {
+    margin-top: 2em;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+
+    .popdownWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      min-height: 100%;
+
+      .popTitle {
+        width: 100%;
+        border-bottom: 1px solid rgb(77, 76, 76);
+      }
+      .cardWrapper {
+        flex-direction: column;
+        max-width: 100%;
+        display: flex;
+        min-height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        margin-left: 0;
+      }
+    }
+  }
+}

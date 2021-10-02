@@ -1,0 +1,106 @@
+.browse {
+  background-color: #1d1d1d;
+
+  .browseWrapper {
+    padding-bottom: 50px;
+
+    .moviesLength {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-top: 1em;
+      font-size: 25px;
+      color: #6ac045;
+    }
+    .pagButtons {
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .paginationBttns {
+        width: 100%;
+        height: 80px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      .paginationBttns a {
+        padding: 15px 15px;
+        margin-right: 5px;
+        border-radius: 5px;
+        border: 1px solid rgb(102, 102, 102);
+        color: #6ac045;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .paginationBttns a:hover {
+        color: white;
+        background-color: #6ac045;
+      }
+
+      .paginationActive a {
+        color: white;
+        background-color: #6ac045;
+      }
+
+      .paginationDisabled a {
+        display: none;
+      }
+
+      .paginationDisabled a:hover {
+        color: white;
+        background-color: white;
+      }
+    }
+    .cardWrapper {
+      margin: 0 auto;
+      width: 75%;
+      margin-top: 2em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .browse {
+    .browseWrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .pagButtons {
+        .paginationBttns {
+        }
+        .paginationBttns a {
+          font-size: 10px !important;
+          padding: 10px;
+        }
+
+        .pageClassName:not(:nth-child(1)) {
+          display: none;
+        }
+
+        .paginationActive {
+          display: block !important;
+        }
+      }
+      .cardWrapper {
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px 10px;
+      }
+    }
+  }
+}

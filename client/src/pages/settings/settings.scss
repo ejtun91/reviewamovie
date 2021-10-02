@@ -1,0 +1,186 @@
+.settings {
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://img.yts.mx/assets/images/movies/respect_2021/background.jpg")
+      no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .settingsTitle {
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+    font-size: 28px;
+    color: #6ac045;
+    font-weight: 700;
+  }
+  .settingsWrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2em;
+    padding-top: 5em;
+    gap: 20%;
+
+    .settingsForm {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      .editUser {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        flex: 50%;
+        label {
+          width: 60%;
+          color: rgb(182, 181, 181);
+          margin-bottom: 0.5em;
+          font-size: 18px;
+        }
+
+        .settingsInput {
+          margin-bottom: 3em;
+          width: 60%;
+          padding: 15px 10px;
+          border-radius: 2px;
+          border: none;
+          background-color: rgb(48, 48, 48);
+          color: white;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        .messageInput {
+          width: 60%;
+          padding: 10px 10px 100px 10px;
+          background-color: rgb(48, 48, 48);
+          border: none;
+          border-radius: 2px;
+          color: white;
+
+          &:hover {
+            outline: none;
+          }
+        }
+      }
+
+      .settingsBtn {
+        background-color: #6ac045;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 0;
+        font-size: 16px;
+        width: 15%;
+        margin-top: 2em;
+        align-self: center;
+
+        &:hover {
+          background-color: #57a037;
+        }
+      }
+    }
+    .setPicture {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 50%;
+      .settingsFormAvatar {
+        display: flex;
+        flex-direction: column;
+
+        .inputSettingsAdd {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .iconSettings {
+            font-size: 35px;
+            color: #6ac045;
+          }
+
+          .addImg {
+            font-size: 15px;
+            top: 25%;
+            color: #6ac045;
+          }
+        }
+
+        .settingsImg {
+          height: 200px;
+          width: 200px;
+          align-self: center;
+          object-fit: cover;
+          border: 1px solid white;
+          margin-bottom: 20px;
+          padding: 5px;
+        }
+
+        .inputSettingsAdd {
+          align-self: center;
+          margin-bottom: 2em;
+          cursor: pointer;
+          position: relative;
+        }
+      }
+      .settingsPicBtn {
+        background-color: #6ac045;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 0;
+        font-size: 16px;
+        width: 30%;
+        margin-top: 2em;
+        align-self: center;
+        margin-bottom: 2em;
+
+        &:hover {
+          background-color: #57a037;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .settings {
+    .settingsTitle {
+      margin-top: 2em;
+    }
+    .settingsWrapper {
+      width: 100%;
+      margin-bottom: 3em;
+      .deleteAccount {
+      }
+      .settingsForm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        img {
+        }
+
+        .settingsBtn {
+          align-self: center;
+          width: 30%;
+        }
+        .settingsFormAvatar {
+          .settingsImg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 3em;
+          }
+        }
+      }
+    }
+  }
+}

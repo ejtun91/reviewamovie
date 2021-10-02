@@ -1,0 +1,357 @@
+.singlePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .singlePageWrapper {
+    width: 100%;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .movieInfo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 3em;
+
+      .movieRating {
+        width: 40%;
+        height: max-content;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 1.5em;
+        position: relative;
+      }
+
+      .cardItemSingle {
+        width: 100%;
+        display: flex;
+        .imgContainer {
+          width: 210px;
+          height: 315px;
+          border: 5px solid white;
+          border-radius: 5px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .titlesContainer {
+          display: flex;
+          flex-direction: column;
+          margin-left: 2em;
+
+          .movieTitle {
+            color: white;
+            font-size: 35px;
+            font-weight: 600;
+          }
+
+          .dateMovie {
+            color: white;
+            font-size: 20px;
+            margin-top: 1em;
+            margin-left: 0.2em;
+          }
+
+          .genre {
+            color: white;
+            margin-top: 0.5em;
+            font-size: 21px;
+            font-weight: 600;
+          }
+
+          .likeContainer {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            color: white;
+            font-size: 20px;
+            margin-top: 4em;
+
+            .icon {
+              color: #6ac045;
+              font-size: 30px;
+            }
+          }
+
+          .imdbRate {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+
+            .icon {
+              color: #6ac045;
+              font-size: 30px;
+            }
+
+            .rate {
+              margin-right: 0.2em;
+            }
+
+            img {
+              margin-right: 1em;
+            }
+          }
+        }
+      }
+
+      .similarMovies {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+        .similarTitle {
+          margin-bottom: 0.7em;
+          align-self: flex-start;
+          color: white;
+        }
+        .cardSimilarItem {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          .imgContainer {
+            width: 92px;
+            height: 138px;
+            margin: auto;
+            cursor: pointer;
+            display: flex;
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              border: 3px solid white;
+              border-radius: 2px;
+
+              &:hover {
+                border: 3px solid #6ac045;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .movieTrailers {
+      margin-top: 3em;
+      display: flex;
+      max-width: 70%;
+      max-height: 250px;
+      gap: 0.3em;
+
+      .trailer {
+        width: 33%;
+        display: flex;
+        position: relative;
+
+        &:hover {
+          opacity: 0.7;
+          transition: 0.2s ease-out;
+        }
+
+        .iconPlay {
+          width: 100%;
+          color: white;
+          font-size: 30px;
+          height: 100%;
+          position: absolute;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          &:hover {
+            opacity: 0.7;
+            transition: 0.2s ease-out;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .imgTrailer {
+        flex: 1;
+        width: 33%;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .movieCastContainer {
+      display: flex;
+      width: 70%;
+      justify-content: center;
+      margin-top: 2em;
+      .synInfo {
+        width: 70%;
+
+        .synopsisTitle {
+          color: rgb(219, 216, 216);
+          font-size: 22px;
+        }
+        .synopsisDesc {
+          margin-top: 1em;
+          width: 95%;
+          color: rgb(112, 112, 112);
+        }
+      }
+      .castInfo {
+        width: 25%;
+        .castList {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          .directorTitle {
+            color: rgb(219, 216, 216) !important;
+            font-size: 18px !important;
+            border: none !important;
+          }
+          .director {
+            margin-bottom: 2em !important;
+          }
+
+          .castName {
+            color: gray;
+            cursor: pointer;
+          }
+          .list {
+            border-bottom: 1px solid rgb(65, 65, 65);
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-size: 14px;
+            margin-bottom: 0.5em;
+
+            img {
+              max-width: 40px;
+              max-height: 40px;
+              border-radius: 50%;
+              width: auto;
+              height: auto;
+            }
+          }
+          .listCastTitle {
+            color: rgb(219, 216, 216);
+            font-size: 18px;
+            border: none !important;
+            margin-bottom: 0.7em;
+          }
+        }
+      }
+    }
+  }
+}
+.modalVideo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal-video {
+    .modal-video-body {
+      .modal-video-inner {
+        width: 700px !important;
+        height: 200px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .singlePage {
+    width: 95%;
+
+    .singlePageWrapper {
+      width: 100%;
+
+      .movieInfo {
+        .movieRating {
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+
+          .cardItemSingle {
+            .imgContainer {
+              max-width: 100px !important;
+              height: 180px;
+              img {
+                max-width: 100px;
+                height: 180px;
+              }
+            }
+
+            .titlesContainer {
+              .movieTitle {
+                font-size: 23px !important;
+              }
+              .dateMovie {
+                margin-top: 0.2em;
+              }
+
+              .genre {
+                margin-top: 0.2em;
+                margin-bottom: 0.2em;
+                font-size: 16px;
+                color: rgb(161, 161, 161);
+              }
+
+              .likeContainer {
+                margin-top: 1em;
+                .icon {
+                  font-size: 20px;
+                }
+              }
+
+              .imdbRate {
+                margin-top: 0.5em;
+                .icon {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+
+        .similarMovies {
+          display: none;
+        }
+      }
+      .movieTrailers {
+        width: 100%;
+        .trailer {
+          height: 150px;
+          width: 100%;
+        }
+        .imgTrailer {
+          display: none;
+        }
+      }
+      .movieCastContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .synInfo {
+          width: 95%;
+        }
+        .castInfo {
+          margin-top: 1em;
+          width: 95%;
+        }
+      }
+    }
+  }
+}

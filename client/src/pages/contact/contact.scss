@@ -1,0 +1,118 @@
+.contact {
+  height: 85vh;
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://img.yts.mx/assets/images/movies/respect_2021/background.jpg")
+      no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  height: 100vh;
+  .contactWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 2em;
+    padding-top: 5em;
+
+    .contactTitle {
+      display: inline-block;
+      width: 60%;
+
+      font-size: 28px;
+      color: #6ac045;
+      font-weight: 700;
+    }
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+      margin-top: 4em;
+      width: 42%;
+
+      label {
+        width: 60%;
+        color: rgb(182, 181, 181);
+        margin-bottom: 0.5em;
+        font-size: 18px;
+      }
+
+      .contactInput {
+        margin-bottom: 3em;
+        width: 60%;
+        padding: 15px 10px;
+        border-radius: 2px;
+        border: none;
+        background-color: rgb(48, 48, 48);
+        color: white;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      .messageInput {
+        width: 60%;
+        padding: 10px 10px 100px 10px;
+        background-color: rgb(48, 48, 48);
+        border: none;
+        border-radius: 2px;
+        color: white;
+
+        &:hover {
+          outline: none;
+        }
+      }
+
+      .contactBtn {
+        margin-top: 3em;
+        padding: 10px 30px;
+        background-color: #6ac045;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+          background-color: #57a037;
+        }
+      }
+    }
+    .descContact {
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-between;
+
+      .forbidMessage {
+        font-size: 17px;
+        color: rgb(182, 181, 181);
+      }
+
+      .sendTo {
+        font-size: 17px;
+        color: rgb(182, 181, 181);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact {
+    min-height: 150vh;
+    .contactWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .contactForm {
+        width: 100%;
+        margin-bottom: 5em;
+      }
+      .descContact {
+        width: 90%;
+      }
+    }
+  }
+}

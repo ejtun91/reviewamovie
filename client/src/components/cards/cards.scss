@@ -1,0 +1,132 @@
+.cardItem {
+  margin-right: 3em;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 1em;
+  .imgContainer {
+    position: relative;
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 210px;
+    height: 315px;
+    transition: 0.2s ease-out;
+    .movieInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.3s ease-out;
+
+      .icon {
+        position: absolute;
+        top: 10%;
+        font-size: 30px;
+        color: #6ac045;
+      }
+
+      .ratingText {
+        position: absolute;
+        top: 25%;
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 auto;
+      }
+      .genre {
+        margin: 0 auto;
+        font-size: 30px;
+        text-align: center;
+        font-weight: 700;
+        display: inline;
+      }
+      .btnViewDet {
+        position: absolute;
+        bottom: 10%;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #6ac045;
+        color: white;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #5aa03c;
+        }
+      }
+      &:hover {
+        opacity: 1;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      border: 5px solid #6ac045;
+    }
+  }
+
+  span {
+    color: white;
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+  }
+  .movieTitle {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .yearDate {
+    color: rgb(194, 194, 194);
+    font-size: 14px;
+    margin-left: 0.7em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cardItem {
+    width: 150px;
+    height: max-content;
+    margin: 0;
+    padding-bottom: 10px;
+    align-items: center;
+
+    .imgContainer {
+      max-width: 90%;
+      max-height: 230px;
+      background-size: contain;
+      .movieInfo {
+        .ratingText {
+          font-size: 15px;
+        }
+        .genre {
+          font-size: 18px;
+        }
+        .btnViewDet {
+          width: 90%;
+          font-size: 13px !important;
+        }
+      }
+      img {
+        max-height: 100%;
+        max-width: 150px;
+      }
+    }
+    .movieTitle {
+      font-size: 14px;
+      min-height: 15px;
+      width: 130px;
+      align-self: flex-start;
+    }
+    .yearDate {
+      align-self: flex-start;
+    }
+  }
+}

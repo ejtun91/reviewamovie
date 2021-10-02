@@ -1,0 +1,80 @@
+.latestDown {
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  .latestWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .latestTitles {
+      display: flex;
+      width: 54%;
+      justify-content: space-between;
+      .latestTitle {
+        color: white;
+        font-size: 21px;
+      }
+      .browseMovies {
+        color: rgb(168, 168, 168);
+        cursor: pointer;
+      }
+    }
+
+    .cardWrapper {
+      margin-left: 3em;
+      width: 65%;
+      margin-top: 2em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .latestDown {
+    margin-top: 5em;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .latestWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      min-height: 100%;
+
+      .latestTitles {
+        width: 100%;
+        border-bottom: 1px solid rgb(77, 76, 76);
+
+        .latestTitle {
+          font-size: 16px;
+          margin-bottom: 1em;
+          margin-left: 1em;
+        }
+        .browseMovies {
+          font-size: 14px;
+          margin-right: 1em;
+        }
+      }
+      .cardWrapper {
+        width: 100%;
+        display: flex;
+        min-height: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        margin-left: 0;
+      }
+    }
+  }
+}

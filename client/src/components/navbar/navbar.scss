@@ -1,0 +1,388 @@
+.navbar {
+  height: 60px;
+  color: #919191;
+  background-color: #1b1b1b;
+  border-bottom: 1px solid rgb(59, 59, 59);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+
+  .navbarWrapper {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-left: 2em;
+      .logoTitle {
+        font-size: 2.2em;
+        font-style: italic;
+        color: #6ac045;
+      }
+      .logoSub {
+        font-size: 1.1em;
+        font-style: italic;
+        color: #6ac045;
+        position: relative;
+        top: 7%;
+      }
+      .logoSubDesc {
+        margin-left: 2em;
+        font-size: 1.2em;
+      }
+    }
+    .menuSearchContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      width: 45%;
+
+      .searchWrapper {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        position: relative;
+
+        .mobile {
+          display: none;
+        }
+
+        .slideSearchContainer {
+          position: absolute;
+          background-color: rgb(51, 51, 51);
+          top: 150%;
+          width: 240px;
+          border: 1px solid rgb(77, 76, 76);
+          border-top: none;
+          transition: 0.3s ease-in-out;
+
+          .slideList {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            transition: 0.3s ease-in-out;
+
+            .itemSlide {
+              display: flex;
+              align-items: center;
+              border-bottom: 1px solid rgb(77, 76, 76);
+              cursor: pointer;
+
+              &:hover {
+                background-color: rgb(97, 96, 96);
+              }
+              img {
+                width: 43px;
+                height: 63px;
+                position: relative;
+                left: 4%;
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+              }
+              .slideDetails {
+                display: flex;
+                flex-direction: column;
+                margin-left: 1.5em;
+                height: 60px;
+                .titleSlide {
+                  color: white;
+                  word-break: break-word;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  line-height: 16px; /* fallback */
+                  max-height: 30px; /* fallback */
+                  -webkit-line-clamp: 2; /* number of lines to show */
+                  -webkit-box-orient: vertical;
+                }
+                .dateSlide {
+                  margin-top: 0.7em;
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+
+        .searchInput {
+          padding: 7px 40px;
+          border-radius: 20px;
+          background-color: #1d1d1d;
+          color: #919191;
+          border: 1px solid #5c5c5c;
+          font-size: 15px;
+          &::placeholder {
+            position: relative;
+            right: 5%;
+            top: 2px;
+            color: #919191;
+            font-size: 15px;
+            font-weight: 600;
+          }
+
+          &:focus::placeholder {
+            color: transparent;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        .iconSearch {
+          position: relative;
+          right: 88%;
+          top: 8px;
+          font-size: 20px;
+          color: #919191;
+        }
+
+        .searchIcon {
+          position: absolute;
+          left: 10px;
+        }
+      }
+      .listItems {
+        display: flex;
+        width: 100%;
+
+        .itemsWrap {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          .item {
+            margin-right: 1em;
+            cursor: pointer;
+
+            &:hover {
+              color: white;
+            }
+            &:nth-child(2) {
+              color: #6ac045;
+            }
+          }
+        }
+
+        .profileUser {
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+        .loginRegItems {
+          display: flex;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          .logReg {
+            display: flex;
+            .itemAuth {
+              margin-right: 1em;
+              cursor: pointer;
+              color: white;
+
+              &:hover {
+                color: #919191;
+              }
+
+              &:first-child {
+                border-right: 1px solid white;
+                padding-right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.itemAuth {
+  margin-right: 1em;
+  cursor: pointer;
+  color: white;
+
+  &:hover {
+    color: #919191;
+  }
+
+  &:first-child {
+    border-right: 1px solid white;
+    padding-right: 15px;
+  }
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(168, 167, 167);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    position: relative;
+    .navbarWrapper {
+      .logo {
+        padding-right: 0;
+        margin-left: 1em;
+        .logoTitle {
+          font-size: 19px;
+        }
+        .logoSubDesc {
+          display: none;
+        }
+      }
+      .menuSearchContainer {
+        display: flex;
+        gap: 10px;
+
+        .searchWrapper {
+          width: 90px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .slideSearchContainer {
+            top: 300%;
+          }
+
+          .searchInput {
+            display: none;
+            width: 100%;
+            border-radius: 10px !important;
+            padding: 5px 7px !important;
+            position: absolute;
+            top: 50px;
+            width: 150px;
+          }
+
+          .mobile {
+            display: block !important;
+            background-color: #3b3a3a;
+            color: white;
+            border: none;
+            width: 100%;
+            border-radius: 10px !important;
+            padding: 5px 7px !important;
+            position: absolute;
+            top: 50px;
+            width: 150px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .iconSearch {
+            display: block !important;
+            font-size: 27px;
+            position: relative !important;
+            top: 3px;
+            left: 70%;
+            cursor: pointer;
+          }
+          .searchIcon {
+            display: none;
+          }
+        }
+        .listItems {
+          width: 80%;
+          margin-right: 2em;
+
+          .itemsWrap {
+            .item {
+              .textLink {
+                display: none;
+              }
+              .iconLink {
+                display: block !important;
+              }
+              .quality {
+                display: block !important;
+                font-size: 20px;
+                position: relative;
+                top: 3px;
+              }
+            }
+          }
+
+          .loginRegItems {
+            .logReg {
+              display: flex;
+              flex-direction: column;
+              .lore {
+                position: absolute;
+                top: 65px;
+                right: 5px;
+                background-color: gray;
+                border-radius: 5px;
+                padding: 5px;
+                background-color: #6ac045;
+
+                .itemAuth {
+                  width: 100%;
+                  border: none;
+                  margin-top: 3px;
+                  text-align: center;
+                  cursor: pointer;
+
+                  &:last-child {
+                    margin-top: 10px;
+                  }
+                }
+              }
+
+              .person {
+                display: block !important;
+                position: relative;
+                top: 3px;
+                cursor: pointer;
+              }
+            }
+            .loreLogout {
+              position: absolute;
+              top: 65px;
+              right: 5px;
+              background-color: gray;
+              border-radius: 5px;
+              padding: 5px;
+              background-color: #6ac045;
+
+              .itemAuth {
+                width: 100%;
+                border: none;
+                margin-top: 3px;
+                text-align: center;
+                cursor: pointer;
+
+                &:last-child {
+                  margin-top: 10px;
+                }
+              }
+            }
+          }
+          .desktopLog {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

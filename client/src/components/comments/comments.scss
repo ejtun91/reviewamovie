@@ -1,0 +1,268 @@
+.commentsContainer {
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .commentsWrapper {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    gap: 1em;
+    flex-wrap: wrap;
+
+    .commentAndInput {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      min-width: 60%;
+      .inputLogin {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+
+        .commentBtn {
+          color: white;
+          background-color: rgb(3, 3, 3);
+          width: 86%;
+          border: none;
+          padding: 15px 0 !important;
+          font-size: 18px;
+          margin-top: 0.5em;
+          border-radius: 5px;
+          cursor: pointer;
+
+          .btnText {
+            transition: 0.2s ease-out;
+
+            &:hover {
+              color: grey;
+            }
+          }
+        }
+
+        .commentForm {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          gap: 1em;
+          padding: 10px 10px;
+          background-color: rgb(3, 3, 3);
+
+          .inputComment {
+            padding: 5px 5px;
+            flex: 2;
+            background-color: rgb(43, 42, 42);
+            color: white;
+            border: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .commentInputBtn {
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+
+            &:hover {
+              background-color: #6ac045;
+              cursor: pointer;
+              color: white;
+            }
+          }
+        }
+
+        .commentTitleContainer {
+          display: flex;
+          align-self: flex-start;
+          gap: 0.7em;
+          margin-bottom: 3em;
+
+          .commentTitle {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .commentsSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 100%;
+        overflow-y: auto;
+        height: 500px;
+
+        .commentBubble {
+          border-radius: 5px;
+          background-color: rgb(3, 3, 3);
+          color: white;
+          width: 80%;
+          padding: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 0.3em;
+          margin-top: 0.5em;
+          position: relative;
+
+          .deleteComment {
+            position: absolute;
+            right: 5%;
+            top: 15%;
+            font-size: 12px;
+            cursor: pointer;
+            color: gray;
+
+            &:hover {
+              color: white;
+            }
+          }
+
+          .userName {
+            font-size: 15px;
+            color: grey;
+            cursor: pointer;
+            transition: 0.2s ease-out;
+
+            &:hover {
+              color: white;
+            }
+          }
+          .dateComment {
+            font-size: 15px;
+            color: grey;
+          }
+
+          .commentDesc {
+            margin-left: 3.2em;
+            width: 85%;
+            line-height: 1.1;
+          }
+
+          img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .reviewsSection {
+      margin-bottom: 1.5em;
+      padding-bottom: 1.5em;
+      flex: 1;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      min-height: 90%;
+      padding: 5px;
+
+      .reviewTitleContainer {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.7em;
+        margin-bottom: 1.5em;
+        .reviewTitle {
+          color: white;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+      .reviewBubble {
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid rgb(49, 49, 49);
+        align-self: flex-end;
+
+        .reviewUsername {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+          margin-bottom: 1em;
+          color: grey !important;
+
+          .reviewUser {
+            color: rgb(172, 172, 172);
+          }
+
+          .reviewRate {
+            color: grey;
+            margin-left: -0.3em;
+            font-size: 17px;
+            color: white !important;
+          }
+        }
+        .reviewDescContainer {
+          .reviewSubject {
+            color: rgb(223, 221, 221) !important;
+            margin-bottom: 1em;
+          }
+          .reviewDesc {
+            width: 90%;
+            color: rgb(146, 145, 145);
+            margin-bottom: 1em;
+            line-height: 1.1;
+            .readMore {
+              background-color: transparent;
+              border: none;
+              color: rgb(146, 145, 145);
+              cursor: pointer;
+              font-size: 13px;
+
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .commentsContainer {
+    .commentsWrapper {
+      width: 100%;
+      height: max-content;
+      flex-direction: column !important;
+
+      .commentAndInput {
+        width: 90%;
+        margin-bottom: 1em;
+        .inputLogin {
+          width: 100%;
+          .commentForm {
+            width: 90%;
+          }
+        }
+        .commentsSection {
+          height: max-content;
+        }
+      }
+      .reviewsSection {
+        width: 90%;
+        .reviewBubble {
+          .reviewDescContainer {
+            .reviewDesc {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

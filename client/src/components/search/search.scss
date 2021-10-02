@@ -1,0 +1,120 @@
+.search {
+  background-color: #111111;
+  color: rgb(170, 170, 170);
+  padding-top: 5em;
+  .searchWrapper {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+
+    .searchForm {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .searchBar {
+        height: 50%;
+        width: 53%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .searchTitle {
+          width: 100%;
+          font-size: 25px;
+          margin-bottom: 0.5em;
+        }
+        input {
+          width: 87%;
+          padding: 13px 8px;
+          border-radius: 5px;
+          color: white;
+          border: none;
+          background-color: rgb(58, 57, 57);
+
+          &:focus {
+            outline: none;
+          }
+        }
+        .searchBtn {
+          margin-left: 0.7em;
+          padding: 12px 20px;
+          background-color: #6ac045;
+          color: white;
+          border: none;
+          font-size: 15px;
+          font-weight: 600;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .filters {
+        margin-top: 1em;
+        width: 50%;
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+
+        .optionContainer {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          margin-right: 1em;
+        }
+        select {
+          background-color: rgb(58, 57, 57);
+          color: rgb(201, 197, 197);
+          padding: 10px 5px;
+          border-radius: 5px;
+        }
+      }
+      .label {
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .search {
+    margin: 0;
+    padding: 0;
+    .searchWrapper {
+      height: max-content;
+      .searchForm {
+        width: 80%;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+
+        .searchBar {
+          width: 100%;
+          align-items: center;
+          input {
+            width: 60%;
+            padding: 7px 5px;
+          }
+
+          .searchTitle {
+            font-size: 18px;
+            text-align: center;
+          }
+
+          .searchBtn {
+            padding: 7px 7px;
+            font-size: 13px;
+          }
+        }
+
+        select {
+          padding: 7px 5px !important;
+        }
+      }
+    }
+  }
+}

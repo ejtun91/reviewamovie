@@ -1,0 +1,75 @@
+.modalContainer {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  top: 10%;
+  background-color: white;
+  .loginTitle {
+    position: absolute;
+    top: 10%;
+    color: #6ac045;
+  }
+  .loginForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    .loginWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 180px;
+      justify-content: space-between;
+      position: relative;
+      .iconLogin {
+        position: absolute;
+        top: 44%;
+        left: 1%;
+        color: lightgray;
+      }
+      .user {
+        top: 5%;
+        left: 1%;
+      }
+      .inputLogin {
+        padding: 15px 30px;
+        border-radius: 2px;
+        border: 1px solid lightgray;
+
+        &:focus {
+          outline: 1px solid #6ac045;
+        }
+
+        &::placeholder {
+          padding-left: 1.2em;
+          font-size: 15px;
+        }
+      }
+      .loginBtn {
+        padding: 10px 20px;
+        background-color: #6ac045;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #5aa53b;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modalContainer {
+    width: 85%;
+  }
+}
